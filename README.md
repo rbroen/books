@@ -1,6 +1,8 @@
 # Books
 
-This project is a demo for Angular 14 with rxjs and Jest.
+A demo Angular 14 project with RxJS, NgRx, and Jest.
+
+![List view](docs/images/listview.png)
 
 ## Development server
 
@@ -32,6 +34,8 @@ docker-compose exec books npm run test
 npm run test
 ```
 
+![List view](docs/images/unittests.png)
+
 ## EXTRA LIBRARIES
 
 These packages were not required for the demo, but added improvements.
@@ -46,3 +50,4 @@ These packages were not required for the demo, but added improvements.
   - https://uxwing.com/open-book-icon/
   - https://uxwing.com/license/
 
+![List view](docs/images/formview.png)
