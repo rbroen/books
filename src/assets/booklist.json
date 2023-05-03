@@ -1,0 +1,62 @@
+[
+  {
+    "uuid": "f30470a3-a6cd-44be-b942-5a27838d0a12",
+    "title": "Anna Karenina",
+    "author": "Leo Tolstoy",
+    "pub_date": "1877-01-01"
+  },
+  {
+    "uuid": "abb67456-6b8e-45a4-b98b-48f58d832b2a",
+    "title": "To Kill a Mockingbird",
+    "author": "Harper Lee",
+    "pub_date": "1960-07-11"
+  },
+  {
+    "uuid": "60bbd3e0-79a6-43a7-8540-ebe99a440164",
+    "title": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald",
+    "pub_date": "1925-04-10"
+  },
+  {
+    "uuid": "4308c0d8-71dd-43a0-b4f9-b747da342321",
+    "title": "One Hundred Years of Solitude",
+    "author": "Gabriel García Márquez",
+    "pub_date": "1967-05-01"
+  },
+  {
+    "uuid": "7630d1cf-ed0c-4b8b-a6ae-e19818182129",
+    "title": "A Passage to India",
+    "author": "E.M. Forster",
+    "pub_date": "1924-06-04"
+  },
+  {
+    "uuid": "233aaebb-848f-482f-87ab-8f1d11ca3044",
+    "title": "Invisible Man",
+    "author": "Ralph Ellison",
+    "pub_date": "1952-04-14"
+  },
+  {
+    "uuid": "56f43de5-d2e5-48df-9619-20e488fe58a6",
+    "title": "Don Quixote",
+    "author": "Miguel de Cervantes",
+    "pub_date": "1605-01-16"
+  },
+  {
+    "uuid": "09516f7c-dfb6-4faa-8f0e-d2417c86c23e",
+    "title": "Beloved",
+    "author": "Toni Morrison",
+    "pub_date": "1987-09-01"
+  },
+  {
+    "uuid": "b93d3a87-1db7-4e33-8f51-4cb66b144154",
+    "title": "Mrs. Dalloway",
+    "author": "Virginia Woolf",
+    "pub_date": "1925-05-14"
+  },
+  {
+    "uuid": "8bf2345d-1f72-49ab-acc7-924ce49d5097",
+    "title": "Things Fall Apart",
+    "author": "Chinua Achebe",
+    "pub_date": "1958-01-01"
+  }
+]

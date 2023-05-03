@@ -1,0 +1,38 @@
+
+
+<form [formGroup]="formObject" (ngSubmit)="processSubmit($event)">
+  <div class="wide-field">
+    <mat-form-field>
+      <input type="text" matInput placeholder="Title" tabIndex="1" formControlName="title">
+      <mat-error *ngIf="formObject.controls['title'].hasError('required')" >Title is <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+  </div>
+  <div class="wide-field">
+    <mat-form-field>
+      <input type="text" matInput placeholder="Author" tabIndex="2" formControlName="author">
+      <mat-error *ngIf="formObject.controls['author'].hasError('required')" >Author is <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+  </div>
+  <div class="wide-field">
+    <mat-form-field>
+      <input type="text" matInput [matDatepicker]="picker" placeholder="Publication date" tabIndex="3" formControlName="pub_date">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+      <mat-error *ngIf="formObject.controls['pub_date'].hasError('required')">Date is <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+  </div>
+
+  <div class="spacing">
+    <button color="primary" id="add-item" tabIndex="4" mat-raised-button type="submit">
+      <mat-icon>send</mat-icon>
+      <span>Send</span>
+    </button>&nbsp;&nbsp;
+    <button mat-raised-button tabIndex="5" (click)="onChancel()">
+      <mat-icon>cancel_schedule_send</mat-icon>
+      <span>Cancel</span>
+    </button>
+  </div>
+</form>

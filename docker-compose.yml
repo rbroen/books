@@ -1,0 +1,13 @@
+services:
+  books:
+    container_name: books
+    build:
+      context: .
+      dockerfile: docker/books/Dockerfile
+    volumes:
+      - .:/home/books/repos/books
+    working_dir: /home/books/repos/books
+    ports:
+      - "4200:4200"
+    entrypoint: [ './docker-start.sh' ]
+

@@ -1,0 +1,79 @@
+<div class="content" role="main">
+  <div class="header">
+
+    <h1>Book list</h1>
+    <div>
+      <button mat-raised-button color="primary" [routerLink]="'/book/add'">Add</button>
+    </div>
+  </div>
+
+  <div *ngIf="booksToShow | async as books; else noBooks">
+
+    <mat-paginator [length]="totalNumberOfItems | async"
+                   [pageSize]="10"
+                   [hidePageSize]="true"
+                   [showFirstLastButtons]="false"
+                   (page)="handlePageEvent($event)"
+                   aria-label="Select page">
+    </mat-paginator>
+
+
+    <table mat-table [dataSource]="books" class="mat-elevation-z8" *ngIf="useDesktopLayout | async; else narrowLayout">
+
+      <!--- Note that these columns can be defined in any order.
+            The actual rendered columns are set as a property on the row definition" -->
+
+      <!-- Position Column -->
+      <ng-container matColumnDef="title">
+        <th mat-header-cell *matHeaderCellDef> Title</th>
+        <td mat-cell *matCellDef="let element"> {{element.title}} </td>
+      </ng-container>
+
+      <!-- Name Column -->
+      <ng-container matColumnDef="author">
+        <th mat-header-cell *matHeaderCellDef> Author</th>
+        <td mat-cell *matCellDef="let element"> {{element.author}} </td>
+      </ng-container>
+
+      <!-- Weight Column -->
+      <ng-container matColumnDef="pub_date">
+        <th mat-header-cell *matHeaderCellDef> Publication date</th>
+        <td mat-cell *matCellDef="let element"> {{element.pub_date | dateTimeToLocaleString:DateTime.DATE_FULL }} </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+    <ng-template #narrowLayout>
+
+      <div class="bookcards">
+        <mat-card class="bookcard" *ngFor="let book of books">
+          <mat-card-header>
+            <mat-card-title>{{ book.title }}</mat-card-title>
+            <mat-card-subtitle>book.author</mat-card-subtitle>
+          </mat-card-header>
+          <mat-card-content>
+            <p>Published: {{ book.pub_date | dateTimeToLocaleString:DateTime.DATE_FULL }}</p>
+          </mat-card-content>
+        </mat-card>
+      </div>
+
+      <!--      <div class="bookcards">-->
+      <!--        <div class="bookcard" *ngFor="let book of books">-->
+      <!--          <b>{{ book.title }}</b><br>-->
+      <!--          By {{ book.author }}<br>-->
+      <!--          <span-->
+      <!--            class="pub_date">{{ book.pub_date | dateTimeToLocaleString:DateTime.DATE_FULL }}</span>-->
+      <!--        </div>-->
+      <!--      </div>-->
+    </ng-template>
+  </div>
+
+
+  <ng-template #noBooks>
+    <div>There are no books to show at this moment.</div>
+  </ng-template>
+
+
+</div>
+

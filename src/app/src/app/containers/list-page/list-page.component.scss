@@ -1,0 +1,35 @@
+
+.header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+
+  h1, div {
+    margin: 19px 0;
+  }
+}
+
+table {
+  width: 100%;
+
+  .mat-column-pub_date {
+    text-align: right;
+  }
+}
+
+.bookcards {
+  .bookcard {
+    box-sizing: border-box;
+    width: 100%;
+    margin-bottom: 16px;
+
+    .mat-card-header-text {
+      margin: 0;
+    }
+
+    p {
+      margin: 0 16px;
+    }
+  }
+}
